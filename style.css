@@ -3,6 +3,7 @@
 html {
     color-scheme: light dark;
     scroll-behavior: smooth;
+    cursor: none!important;
 }
 
 :root {
@@ -12,8 +13,8 @@ html {
     --text-secondary: light-dark(hsl(0 0% 35%), hsl(0 0% 80%));
     --text-accent: light-dark(hsl(284 90% 30%), hsl(284 100% 92%));
     --text-glow: light-dark(
-        0 0 0 / 20%,  /* subtle shadow on light background */
-        0 0 0 / 55%   /* stronger shadow on dark background */
+        0 0 0 / 20%,
+        0 0 0 / 55%
     );
     --fs-body: clamp(0.95rem, 0.5vw + 0.8rem, 1.1rem);
     --fs-h1: clamp(5.5rem, 5vw + 1rem, 4rem);
@@ -42,8 +43,36 @@ body {
     overflow-x: hidden!important;
 }
 
+a, button, .interactive, input[type="submit"],input[type="image"] {
+    cursor: none;
+}
+
+span.underline {
+    display: inline-block;
+    position: relative;
+}
+
+span.underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-accent);
+  transform-origin: bottom right;
+  transition: transform 0.40s ease-out;
+}
+
+span.underline:hover::after, span.underline:focus::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .img-invert {
     transform: scale(-1, 1);
+    filter: drop-shadow(0px 0px 100px hsl(var(--text-glow)));
 }
 
 p, a, li {
@@ -125,6 +154,12 @@ h3 { font-size: var(--fs-h3)!important; }
     } */
 }
 
+@media only screen and (max-width: 700px) {
+  body .custom-cursor {
+    display: none;
+  }
+}
+
 
 .container-fluid {
     min-height: auto;
@@ -184,4 +219,21 @@ h3 { font-size: var(--fs-h3)!important; }
 	100% {
 		translate: -20% 20%;
 	}
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: black;
+  filter: invert(100%)!important;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 99999;
+}
+
+.custom-cursor.hover {
+  transform: translate(-50%, -50%) scale(3);
 }
