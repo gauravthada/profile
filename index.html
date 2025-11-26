@@ -10,10 +10,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
-        <div class="backdropShape"></div>
         <div class="glassy-bg"></div>
-    <div class="nav navbar-expand-sm fixed-top navbar-dark glassmorph justify-content-sm-center ps-5 pe-5">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar"><span class="navbar-toggler-icon"></span></button>
+        <div class="backdropShape"></div>
+        <div class="nav navbar-expand-sm fixed-top navbar-dark glassmorph justify-content-sm-center ps-5 pe-5">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="Navbar">
             <ul class="navbar-nav gap-sm-4">
                 <li class="nav-item"><a href="#" class="nav-link small text-uppercase">Home</a></li>
@@ -24,82 +24,123 @@
             </ul>
         </div>
     </div>
-    <div class="container-fluid" style="margin-top: 5rem;">
-        <section class="row">
-            <div class="col-sm-4"><img src="me.png" alt="My Image" class="img-fluid img-invert" width="100%"></div>
-            <div class="col-sm-8">
+    <div class="container-fluid">
+        <section class="row" id="home">
                 <div class="interactive"><i><h1 class="mainTitle" data-text="Hey, I'm Gaurav.">Hey, I'm <span class="underline" tabindex="1">Gaurav.</span></h1></i></div>
                 <h5 class="subTitle">An aspiring <span class="underline" tabindex="1">Full-Stack</span> and <span class="underline" tabindex="1">AI Developer</span></h5>
-                <div class="row mt-5">
-                    <div class="col-sm-4">
-                        <div class="card text-bg-dark">
-                            <img src="../profile/images/bg.jpg" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">About</h5>
-                                <p class="card-text">Learn who I am.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card text-bg-dark">
-                            <img src="../profile/images/bg.jpg" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">About</h5>
-                                <p class="card-text">Learn who I am.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card text-bg-dark">
-                            <img src="../profile/images/bg.jpg" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">About</h5>
-                                <p class="card-text">Learn who I am.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-sm-6">
-                        <div class="card text-bg-dark">
-                            <img src="../profile/images/bg.jpg" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">About</h5>
-                                <p class="card-text">Learn who I am.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card text-bg-dark">
-                            <img src="../profile/images/bg.jpg" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">About</h5>
-                                <p class="card-text">Learn who I am.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
         </section>
+        <section id="about" class="container py-5 my-5">
+                <h2 class="section-title mb-4 text-center"><span class="underline">About Me</span></h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-12 text-center">
+                        <p>
+                            I am an aspiring Full-Stack and AI Developer passionate about building 
+                            intelligent applications, clean UI/UX and scalable systems.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section id="education" class="py-5 my-5 plain-section">
+                <div class="container">
+                    <h2 class="section-title mb-4 text-center"><span class="underline">Education</span></h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-7">
+                            <div class="timeline-item p-3 mb-3 rounded-4 shadow-sm">
+                                <h4>Bachelor of Computer Applications</h4>
+                                <p class="text-secondary mb-1">Star Infotech College, Ajmer</p>
+                                <small>2025 – Present</small>
+                            </div>
+                            <div class="timeline-item p-3 rounded-4 shadow-sm">
+                                <h4>Senior Secondary</h4>
+                                <p class="text-secondary mb-1">Commerce</p>
+                                <p class="text-secondary mb-1">Saint Paul's Sr. Sec. School, Ajmer</p>
+                                <small>Graduated 2025</small>
+                            </div>
+                            <div class="timeline-item p-3 rounded-4 shadow-sm">
+                                <h4>Primary, Pre-Primary & Secondary</h4>
+                                <p class="text-secondary mb-1">Saint Paul's Sr. Sec. School, Ajmer</p>
+                                <small>Graduated 2025</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="skills" class="py-5 my-5">
+                <div class="container">
+                    <h2 class="section-title mb-4 text-center"><span class="underline">Skills</span></h2>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+
+                            <div class="skill mb-4">
+                                <p class="mb-1">HTML / CSS</p>
+                                <div class="skill-bar"><span style="width: 90%"></span></div>
+                            </div>
+
+                            <div class="skill mb-4">
+                                <p class="mb-1">JavaScript</p>
+                                <div class="skill-bar"><span style="width: 75%"></span></div>
+                            </div>
+
+                            <div class="skill mb-4">
+                                <p class="mb-1">React</p>
+                                <div class="skill-bar"><span style="width: 70%"></span></div>
+                            </div>
+
+                            <div class="skill mb-4">
+                                <p class="mb-1">Python / AI</p>
+                                <div class="skill-bar"><span style="width: 65%"></span></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="projects" class="py-5 my-5 plain-section">
+                <div class="container">
+                    <h2 class="section-title mb-4 text-center"><span class="underline">Projects</span></h2>
+
+                    <div class="row g-4 justify-content-center">
+
+                        <div class="col-md-4">
+                            <div class="project-card p-4 rounded-4 shadow-sm">
+                                <h4>Project One</h4>
+                                <p>A short description of your project.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="project-card p-4 rounded-4 shadow-sm">
+                                <h4>Project Two</h4>
+                                <p>This can be AI, web, or automation related.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="py-5 my-5">
+                <div class="container">
+                    <h2 class="section-title mb-4 text-center"><span class="underline">Contact Me</span></h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-7">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.355300993068!2d74.63055437535876!3d26.47650267690992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be7a96ee5702b%3A0xf428219d71a2b204!2sStar%20Infotech%20College!5e0!3m2!1sen!2sin!4v1764160137270!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="myMap"></iframe>
+                            <form class="my-4 p-4 rounded-4 shadow-sm contact-form">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                                </div>
+                                <button class="btn btn-outline-light w-100 py-2">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
     </div>
-    <script>
-        const cursor = document.createElement('div')
-        cursor.className = 'custom-cursor'
-        document.body.appendChild(cursor)
-
-        // move cursor
-        document.addEventListener('mousemove', e => {
-        cursor.style.left = e.clientX + 'px'
-        cursor.style.top = e.clientY + 'px'
-        })
-
-        // scale on hover
-        document.querySelectorAll('a, button, .interactive, input[type="submit"],input[type="image"], span.underline').forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('hover'))
-        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'))
-        })
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>

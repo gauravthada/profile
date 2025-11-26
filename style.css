@@ -61,13 +61,13 @@ span.underline::after {
   bottom: 0;
   left: 0;
   background-color: var(--text-accent);
-  transform-origin: bottom right;
+  transform-origin: bottom bottom;
   transition: transform 0.40s ease-out;
 }
 
 span.underline:hover::after, span.underline:focus::after {
   transform: scaleX(1);
-  transform-origin: bottom left;
+  transform-origin: bottom bottom;
 }
 
 .img-invert {
@@ -106,7 +106,7 @@ h3 { font-size: var(--fs-h3)!important; }
   /* font-weight: bolder; */
   text-align: center;
   margin: 10px;
-  font-size: 2em;
+  font-size: 7rem!important;
   background: linear-gradient(45deg, hsl(284, 10%, 10%), hsl(284, 100%, 10%));
   -webkit-background-clip: text;
   background-clip: text;
@@ -119,6 +119,9 @@ h3 { font-size: var(--fs-h3)!important; }
   position: absolute;
   top: 0;
   left: 0;
+  background: linear-gradient(45deg, hsl(284, 10%, 10%), hsl(284, 100%, 10%));
+  -webkit-background-clip: text;
+  background-clip: text;
   width: 100%;
   height: 100%;
   text-shadow: 2px 2px 2px var(--text-primary);
@@ -127,6 +130,8 @@ h3 { font-size: var(--fs-h3)!important; }
 
 .subTitle {
     text-align: center;
+    text-shadow: 0 0 8px rgb(var(--text-glow))!important;
+    font-size: 1.8rem!important;
 }
 
 .glassmorph {
@@ -181,19 +186,20 @@ h3 { font-size: var(--fs-h3)!important; }
 	); 
 	backdrop-filter: blur(20px);
 	filter: blur(0.5px);
-    position: fixed;
+    position: absolute;
     z-index: 0;
-    min-height: 125dvh!important;
+    min-height: 100dvh!important;
     min-width: 100dvw;
 }
 
 .backdropShape {
-	position: fixed;
-	width: 300px;
+	position: absolute;
+	width: 300px!important;
 	height: 300px;
+    opacity: 0.90;
 	border-radius: 100px;
 	rotate: 15deg;
-	filter: blur(100px);
+	filter: blur(20px);
 	mix-blend-mode: plus-lighter;
 	background: linear-gradient(
 		180deg,
@@ -204,21 +210,8 @@ h3 { font-size: var(--fs-h3)!important; }
 	);
 	z-index: -1;
 	box-shadow: 0px 0px 120px -10px oklch(44% 57% 285deg);
-	translate: -20% 20%;
-    animation: 3s up-n-down infinite;
-    margin: auto;
-}
-
-@keyframes up-n-down {
-	0% {
-		translate: -20% 20%;
-	}
-	50% {
-		translate: 20% -20%;
-	}
-	100% {
-		translate: -20% 20%;
-	}
+	top: 5%;
+    left: 35%;
 }
 
 .custom-cursor {
@@ -236,4 +229,83 @@ h3 { font-size: var(--fs-h3)!important; }
 
 .custom-cursor.hover {
   transform: translate(-50%, -50%) scale(3);
+}
+
+#home {
+    min-height: 88vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    position: relative;
+}
+
+.interactive:has(h1) {
+    margin: 0 !important;
+}
+
+.section-title {
+    font-size: var(--fs-h2);
+}
+
+/* Soft plain background sections */
+.plain-section {
+    background: hsla(0,0%,100%,0.05);
+    border-top: 1px solid hsla(0,0%,60%,0.1);
+    border-bottom: 1px solid hsla(0,0%,60%,0.1);
+}
+
+/* Timeline */
+.timeline-item {
+    background: hsla(0,0%,100%,0.06);
+    /* backdrop-filter: blur(6px); */
+    border: 1px solid hsla(0,0%,60%,0.1);
+}
+
+/* Skill Bars (glassy) */
+.skill-bar {
+    background: hsla(0,0%,100%,0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    height: 12px;
+    position: relative;
+    backdrop-filter: blur(4px);
+}
+.skill-bar span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, hsl(284 90% 60%), hsl(284 80% 40%));
+    box-shadow: 0 0 8px hsl(284 90% 60%);
+}
+
+/* Project cards */
+.project-card {
+    background: hsla(0,0%,100%,0.08);
+    border: 1px solid hsla(0,0%,60%,0.15);
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Contact form */
+.contact-form {
+    background: hsla(0,0%,100%,0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid hsla(0,0%,60%,0.15);
+}
+.contact-form .form-control {
+    background: hsla(0,0%,100%,0.06);
+    border: none;
+    color: var(--text-primary);
+}
+.contact-form .form-control::placeholder {
+    color: var(--text-secondary);
+}
+
+.myMap {
+    border-radius: 20px;
 }
